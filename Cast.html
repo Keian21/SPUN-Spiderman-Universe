@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Spider-man Universe</title>
+		<meta charset="utf-8">
+		<link rel="icon" href="favicon.ico" type="img/x-icon">
+	</head>
+	
+	<style type="text/css">
+		body{
+			height: 1200px;
+			margin: 0;
+			padding: 0;
+			font-family: comic sans ms;
+			background-image: url('bg po.avif');
+		}
+		.ge{
+			margin-top: 0;
+			font-weight: bold;
+			padding-top: 80px;
+			text-align: center;
+			transition: .3s;
+			font-size: 30px;
+			color: #fff;
+			-webkit-text-stroke: 2px #B11313;
+		}
+		.taas{
+			position: fixed;
+			width: 100%;
+			height: 50px;
+			font-weight: bold;
+			text-align: right;
+			background: #B11313;
+			transition: 0.3s;
+			color: #fff;
+			padding: 20px;
+			z-index: 2;
+		}
+		
+		.taas a{
+			color: #fff;
+			transparent;
+			text-decoration: none;
+		}
+			
+		.taas a:hover{
+			color: blue;
+			transparent;
+			text-decoration: underline;
+		}
+		.taas a:active{
+			color: #fff;
+			transparent;
+			text-decoration: none;
+		}
+		.eh{
+			position: fixed;
+			height: auto;
+			left: 20px;
+			width: 50px;
+		}
+		.container {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		.card {
+			position: relative;
+			width: 270px;
+			margin: 5em;
+			display: grid;
+			grid-template-columns: 5fr;
+			grid-template-rows: 180px 12fr auto;
+		}
+
+		.card-body,
+		.card-footer {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.card-image {
+			position: relative;
+			border-top-left-radius: 18px;
+			border-top-right-radius: 18px;
+			z-index: 2;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: url(ggg.jpg);
+			z-index: 1;
+		}
+
+		.card-image img {
+			max-width: 95%;
+			max-height: 95%;
+			transition: max-width 0.4s, max-height 0.4s;
+		}
+
+		.card:hover .card-image img {
+			max-width: 120%;
+			max-height: 120%;
+		}
+
+
+		.card {
+			box-shadow: 0 15px 30px -10px #000;
+			cursor: pointer;
+		}
+
+		.card:hover {
+			box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.2);
+		}
+
+
+		.card-body {
+			background-image: url(card.jpg);
+			background-size: cover;
+			padding: 20px 28px;
+			border-bottom-left-radius: 18px;
+			border-bottom-right-radius: 18px;
+		}
+
+		.card-body .universe {
+			font-weight: bolder;
+			-webkit-text-stroke: 1px #000;
+		}
+
+		.card-body h2 {
+			font-size: 1.8em;
+			margin: 4px auto 12px;
+		}
+
+		.card-body p {
+			color: #fff;
+			font-size: 1.1em;
+			line-height: 20px;
+			text-align: center;
+		}
+
+		.card:nth-child(1) .universe {
+			color: #4891ba;
+		}
+		.card:nth-child(2) .universe {
+			color: #f6b10f;
+		}
+		.card:nth-child(3) .universe {
+			color: #959595;
+		}
+		.card:nth-child(4) .universe {
+			color: #9e5161;
+		}
+		.card:nth-child(5) .universe {
+			color: #4891ba;
+		}
+		.card:nth-child(6) .universe {
+			color: #f6b10f;
+		}
+		.card:nth-child(7) .universe {
+			color: #959595;
+		}
+
+		.selector {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255, 255, 255, 0.85);
+			border-radius: 18px;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0;
+			transition: opacity 0.5s;
+		}
+
+		.card:hover .selector {
+			opacity: 1;
+		}
+
+		.selector button {
+			background-color: #4891ba;
+			color: #fff;
+			outline: none;
+			border: 2px solid currentColor;
+			cursor: pointer;
+			padding: 12px 20px;
+			transform: translateY(60px);
+			border-radius: 50px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-size: 1.1em;
+			font-weight: bolder;
+			transition: opacity 0.3s;
+		}
+
+		.selector button:hover {
+			opacity: 0.8;
+		}
+
+		.card:nth-child(2) .selector button {
+			background-color: #f6b10f;
+		}
+		.card:nth-child(3) .selector button {
+			background-color: #959595;
+		}
+		.card:nth-child(4) .selector button {
+			background-color: #9e5161;
+		}
+		.card:nth-child(5) .selector button {
+			background-color: #f6b10f;
+		}
+		.card:nth-child(6) .selector button {
+			background-color: #959595;
+		}
+		.card:nth-child(7) .selector button {
+			background-color: #9e5161;
+		}
+	</style>
+	<body>
+	
+		<div class="taas">
+		<img src="k.jpg" class="eh">
+		<ul>
+			<a href="Spidy.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Spiderman Movies.html">Movie</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Cast.html">Character</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Us.html">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</ul>
+		</div>
+			<div class="ge">
+				<p>Spider-Man Cast & Characters</p>
+			</div>
+			<hr color>
+			
+			<div class="container">
+				<div class="card">
+					<div class="card-image">
+						<img src="th spidy.png" alt="Character">
+					</div>
+
+					<div class="card-body">
+						<span class="universe">Earth-616</span>
+						<h2 style="color:#fff">Peter Parker</h2>
+						<p style="font-size:12.6px">Peter Parker balances his life as an ordinary high school student in Queens with his superhero alter-ego Spider-Man, and finds himself on the trail of a new menace prowling the skies of New York City.</p>
+					</div>
+
+					<div class="selector">
+						<button onclick="location.href='Character.html'">go with this!</button>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-image">
+						<img src="tm spidy.png" alt="Character">
+					</div>
+
+					<div class="card-body">
+						<span class="universe">Earth-96283</span>
+						<h2 style="color:#fff">Peter Parker</h2>
+						<p>Peter Parker struggling to manage both his personal life and his duties as Spider-Man.<p>
+					</div>
+					
+					<div class="selector">
+						<button onclick="location.href='Character1.html'">go with this!</button>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-image">
+						<img src="ag spidy.png" alt="Character">
+					</div>
+
+					<div class="card-body">
+						<span class="universe">Earth-120701</span>
+					   <h2 style="color:#fff">Peter Parker</h2>
+						<p style="font-size:14px">Peter Parker tries to protect his girlfriend Gwen Stacy as he investigates his parents' death while also dealing with the supervillain Electro.</div>
+
+					<div class="selector">
+						<button onclick="location.href='Character2.html'">go with this!</button>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-image">
+						<img src="mm spidy.png" alt="Character">
+					</div>
+
+					<div class="card-body">
+						<span class="universe">Earth-1610</span>
+						<h2 style="color:#fff">Miles Morales</h2>
+						<p style="font-size:16px"> Initially not wanting to be a hero, he was forced to take up the mantle of the masked vigilante after the death of Peter Parker.</p>
+					</div>
+
+					<div class="selector">
+						<button onclick="location.href='Character3.html'">go with this!</button>
+					</div>
+				</div>
+				
+				<div class="card">
+					<div class="card-image">
+						<img src="gwen spidy.png" alt="Character">
+					</div>
+
+					<div class="card-body">
+						<span class="universe">Earth-65</span>
+						<h2 style="color:#fff">Gwen Stacey</h2>
+						<p style="font-size:21px">Gwen has a penchant for detective work and is an analytical thinker.</p>
+					</div>
+					
+					<div class="selector">
+						<button onclick="location.href='Character4.html'">go with this!</button>
+					</div>
+				</div>
+				
+				<div class="card">
+					<div class="card-image">
+						<img src="ven.png" alt="Character">
+					</div>
+
+					<div class="card-body">
+						<span class="universe">Earth-616</span>
+						<h2 style="color:#fff">Eddie Brock</h2>
+						<p style="font-size:10px">Eddie Brock is a journalist who publicly exposes the identity of a man he believes is a serial killer, the Sin-Eater, only to find his reputation ruined when Spider-Man captures the real killer.</p>
+					</div>
+					
+					<div class="selector">
+						<button onclick="location.href='Character5.html'">go with this!</button>
+					</div>
+				</div>
+			</div>
+    
+</body>
+</html>
